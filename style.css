@@ -1,65 +1,103 @@
-body{
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+
     font-family: 'Poppins', sans-serif;
-    background-color: white;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header{
+.header {
+    background-color: white;
+
+    max-width: 100%;
+    margin: 0 auto;
+    position: sticky;
+
+}
+
+.header-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 6%;
+
 }
-.header ul{
+
+.header ul {
     display: flex;
-  
+    justify-content: space-around;
 }
-.header ul li{
-   margin-right: 20px;
-   list-style: none;
-   font-size: 18px;
-   cursor:pointer;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+
+.header ul li {
+    margin-right: 20px;
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
-  
-}
-.header ul li:hover{
- text-decoration: 2px palevioletred underline;
 
-  
 }
-.header h1{
+
+.header ul li:hover {
+    text-decoration: 2px palevioletred underline;
+
+
+}
+
+
+.header h1 {
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Dancing Script', cursive; */
     font-family: 'Italianno', cursive;
+  
 }
-.icon i{
+
+.icons i {
     color: palevioletred;
+   font-weight: bold;
 }
-.logo1{
+
+.logo1 {
     text-transform: lowercase;
-    text-shadow: 1px 1px palevioletred;
-    color:rgba(0, 0, 0, 0.847);
+    text-shadow: 2px 2px rgb(187, 78, 115);
+    /* text-shadow: 1px 1px brown; */
+    color: rgba(0, 0, 0, 0.847); 
+     font-weight: bolder;
 }
-.logo2{
+
+.logo2 {
     text-transform: uppercase;
     color: rgb(239, 158, 171);
     text-shadow: 2px 2px black;
+    font-weight: bolder;
 }
-.home{
+
+.home {
     background-color: palevioletred;
-    box-shadow: 5px 5px 7px grey;
-    padding: 12px 12px;
+    box-shadow: 2px 2px 5px grey;
+    padding: 8px 18px;
     color: whitesmoke;
-    border-radius:7px ;
+    border-radius: 7px;
     text-transform: uppercase;
+    font-weight: bold;
+}
+.home:hover{
+    background-color: rgb(226, 190, 202);
+    color: black;
+    text-decoration: none!important;
 }
 
 /* banner */
-.banner{
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,72 +107,111 @@ body{
     border-radius: 22% 0px 22% 0px;
     /* border-radius: 10px; */
 
-    
-
 
 }
-.first-banner-des{
+
+.first-banner-des {
     width: 40%;
     margin: 0;
     padding: 10px;
-  
+
 }
 
-.banner-name{
+.banner-name {
     font-size: 35px;
     /* color: rgb(189, 51, 120); */
-    color:white;
+    color: white;
     padding: 10px;
     margin: 0;
-   text-shadow: 2px 2px gray;
+    text-shadow: 2px 2px gray;
     /* border-bottom: 2px solid palevioletred; */
-  
-}
-.banner-des{
-    text-align:center;
-    padding: 10px;
-    margin-top:-20px;
 
 }
-.banner-img{
+
+.banner-des {
+    text-align: center;
+    padding: 10px;
+    margin-top: -20px;
+
+}
+
+.banner-img {
     width: 60%;
 }
-.banner-img img{
+
+.banner-img img {
     width: 100%;
-  
+
 }
 
-.offer{
+.offer {
     text-transform: uppercase;
     margin-top: -20px;
 }
-.sale{
+
+.sale {
     text-transform: uppercase;
     font-size: 60px;
     font-family: 'Skranji', cursive;
     color: brown;
     /* margin: 0; */
     padding: 0;
-   
-   
+
+
 }
 
-.shop-btn{
-    padding: 12px 15px;
+.shop-btn,
+.read-btn {
+    padding: 12px 20px;
     border-radius: 5px;
     border: none;
-   background-color: rgb(208, 87, 127);
-   font-size: 18px;
-   color: white;
-   box-shadow: 2px 2px 2px gray;
-      margin-top: -20px;
+    background-color: rgb(208, 87, 127);
+    font-size: 18px;
+    color: white;
+    box-shadow: 2px 2px 2px gray;
+    margin-top: -20px;
+    font-weight: bold;
 }
-.shop-btn:hover{
-  background-color: transparent;
-  /* outline: auto; */
-  border: 2px solid white;
-  color: palevioletred;
+
+.shop-btn:hover {
+    background-color: transparent;
+    /* outline: auto; */
+    border: 2px solid white;
+    color: palevioletred;
 
 
-  
+
+}
+
+.read-btn {
+    background-color: transparent;
+    /* outline: auto; */
+    border: 2px solid white;
+    color: palevioletred;
+}
+
+.read-btn:hover {
+    background-color: rgb(208, 87, 127);
+    color: white;
+    border: 0;
+}
+
+
+/* cards */
+
+.product-heading{
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    /* font-family: 'Times New Roman', Times, serif */
+    text-decoration: 2px rgb(208, 87, 127) underline;
+      
+}
+
+
+.cardWrap{
+ 
+    display:  grid;
+    grid-template-columns: repeat(3,1fr);
 }
