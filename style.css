@@ -1,4 +1,3 @@
-
 body {
 
     font-family: 'Poppins', sans-serif;
@@ -7,7 +6,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    /* overflow-x: hidden;
+    
+overflow-y: hidden; */
+    /* overflow: hidden; */
 
 }
 
@@ -114,6 +116,7 @@ body {
     /* border-radius: 22% 0px 22% 0px; */
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    /* overflow: hidden; */
 
 }
 
@@ -133,13 +136,14 @@ body {
     margin: 0;
     /* text-shadow: 2px 2px gray; */
     /* border-bottom: 2px solid palevioletred; */
+    /* margin-bottom: -40px; */
 
 }
 
 .banner-des {
     text-align: center;
     padding: 10px;
-    margin-top: -20px;
+    margin-top: -10px;
 
 }
 
@@ -179,6 +183,7 @@ body {
     box-shadow: 2px 2px 2px gray;
     margin-top: -20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .shop-btn:hover {
@@ -194,12 +199,13 @@ body {
 .read-btn {
     background-color: transparent;
     /* outline: auto; */
-    border: 2px solid white;
+    border: 2px solid palevioletred;
     color: palevioletred;
 }
 
 .read-btn:hover {
     background-color: rgb(208, 87, 127);
+    border: 2px solid white;
     color: white;
     border: 0;
 }
@@ -215,15 +221,15 @@ body {
     color: palevioletred;
     /* text-shadow: 2px 2px palevioletred; */
     color: palevioletred;
-    
+
     text-shadow: 2px 2px black;
 
 }
 
-.horizontalLine{
+.horizontalLine {
     width: 150px;
     height: 3px;
-    background-color:palevioletred;
+    background-color: palevioletred;
 }
 
 
@@ -344,6 +350,7 @@ body {
     /* margin-top: -20px; */
     font-weight: bold;
     text-shadow: 2px 2px black;
+    cursor: pointer;
 }
 
 .card-btn:hover {
@@ -366,14 +373,15 @@ body {
     text-align: center;
     margin-top: 20px;
     color: palevioletred;
-    
+
     text-shadow: 2px 2px black;
 
 }
-.FQA-container .horizontal-line{
+
+.FQA-container .horizontal-line {
     width: 300px;
     height: 3px;
-    background-color:palevioletred;
+    background-color: palevioletred;
 }
 
 
@@ -455,4 +463,149 @@ body {
     0% {
         transform: scaleY(0);
     }
+}
+
+
+/* footer */
+.footer-container {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+    height: 280px;
+    /* background-color: #ddd; */
+    padding: 20px;
+    /* box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); */
+    color: white;
+    background-color: black;
+}
+
+.footer-links h3 {
+    text-transform: uppercase;
+    border-bottom: 2px solid palevioletred;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.footer-links .links {
+    list-style: none;
+    text-align: center;
+    color: #e4e2e2;
+    text-decoration: none;
+    /* color: palevioletred; */
+    font-size: 18px;
+
+}
+
+.footer-links .links i {
+    text-decoration: none;
+    color:palevioletred;
+    
+}
+
+.footer-address h3 {
+    text-transform: uppercase;
+    border-bottom: 2px solid palevioletred;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.footer-address .input {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: #F5C0CB; */
+}
+
+.footer-address .input .input-field {
+    width: 480px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-address .input .send {
+    width: 100px;
+    height: 40px;
+    margin-left: 15px;
+    /* padding: 15px 15px; */
+    background-color: palevioletred;
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+
+}
+.footer-address .input .send:hover {
+    
+    background-color: pink;
+    color:black;
+    
+
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-address .subscribe-btn {
+    padding: 12px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    border: 2px solid palevioletred;
+    cursor: pointer;
+
+    border-radius: 20px;
+
+}
+.footer-address .subscribe-btn:hover {
+   background-color: palevioletred;
+color: black;
+
+}
+
+.footer-social-link h3 {
+    text-transform: uppercase;
+    border-bottom: 2px solid palevioletred;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.footer-social-link .address {
+    word-wrap: break-word;
+    font-size: 17px;
+    text-align: center;
+}
+
+.footer-social-link .social-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.footer-social-link .social-links i {
+
+    font-size: 20px;
+    color: palevioletred;
+  
+    cursor: pointer;
+}
+.footer-social-link .social-links i:hover{
+
+    /* border-bottom: 2px solid pink; */
+    color:pink;
 }

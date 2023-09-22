@@ -136,6 +136,10 @@ products.forEach(product => {
 
     div.appendChild(card)
 });
+// const seeMoreBtn = document.createElement('button')
+// seeMoreBtn.innerHTML =`<button>See More </button>`
+// seeMoreBtn.classList.add('seeMore')
+// main.appendChild(seeMoreBtn)
 main.appendChild(newSection)
 
 
@@ -205,3 +209,46 @@ accordionsObject.forEach(accordion => {
 });
 
 main.appendChild(fqaSection)
+
+
+// footer 
+// const footer = document.getElementById('footer')
+const footerContainer = document.createElement('section')
+footerContainer.classList.add('footer-container')
+footerContainer.innerHTML = ` 
+    <div class="footer-links">
+         <h3>Useful Links</h3>
+         <div class="links">
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> About</li>
+            <li><a href="#"><i class="fa-solid fa-address-book"></i> </a>Contact</li>
+            <li><a href="#"><i class="fa-brands fa-product-hunt"></i> </a>Product</li>
+            <li><a href="#"><i class="fa-brands fa-shopify"></i> </a>Shop</li>
+         </div>
+     </div>
+
+    <div class="footer-address">
+            <h3>Newsletter</h3>
+          <div class="input">
+                <input class="input-field" type="text" placeholder="Your email address">
+                <button class="send">Send</button>     
+          </div>
+            <div class="subscribe"><button class=" subscribe-btn">Subscribe Now</button> </div>
+    </div>
+
+        <div class="footer-social-link">
+            <h3>Contact</h3>
+           <div class="address">
+            123 Gift Street,Joyville,
+                <br>
+            Happiness County,
+            Giftland.
+           </div>
+           <div class="social-links">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+           </div>
+        </div>
+`
+body.appendChild(footerContainer)
