@@ -4,7 +4,7 @@ const header = document.createElement('header')
 header.classList.add('header')
 header.innerHTML = `<div class="header-div">
 <div>
-    <h1> <span class="logo1">Gifting</span><span class="logo2">Gallery</span></h1>
+    <h1><i class="fa-solid fa-gift" style="color: #e06ca4;"></i><span class="logo1">Gifting</span><span class="logo2">Gallery</span></h1>
 </div>
 <div>
     <ul>
@@ -33,7 +33,7 @@ section.classList.add('banner')
 section.innerHTML = `
 
 <div class="first-banner-des">
-    <h3>Welcome to<i><span class="banner-name icon">Gifting Gallery <i class="fa-solid fa-gift" style="color: #e06ca4;"></i>!</span> </i></h3>
+    <h3>Welcome to<i><span class="banner-name icon">Gifting Gallery!</span> </i></h3>
     <p class="banner-des">Our carefully curated collection of gifts is designed to delight and inspire, offering a diverse range of options for every taste and budget. </p>
     <h4 class="offer"> Spacial offer <span class="sale"> Sale</span> Up to 60%</h4>
     <button class="shop-btn">Shop Now</button>
@@ -93,14 +93,14 @@ const products = [
     },
 ]
 
-   let  starIcon = '<i class="fa-solid fa-star"></i>';
-   let getRating =(rating)=>{
-    let icon ='';
-    for(let i=0;i<rating; i++){
-      icon = icon+starIcon
+let starIcon = '<i class="fa-solid fa-star"></i>';
+let getRating = (rating) => {
+    let icon = '';
+    for (let i = 0; i < rating; i++) {
+        icon = icon + starIcon
     }
     return icon;
-   }
+}
 
 // Create a card section
 const newSection = document.createElement('section')
@@ -108,6 +108,9 @@ const h1 = document.createElement('h1')
 h1.innerText = `Latest Product`
 h1.classList.add('product-heading')
 newSection.appendChild(h1)
+const hr = document.createElement('hr')
+hr.classList.add('horizontalLine')
+newSection.appendChild(hr)
 const div = document.createElement('div')
 div.classList.add('cardWrap')
 newSection.appendChild(div)
@@ -125,9 +128,9 @@ products.forEach(product => {
         
        `
     const btn = card.querySelector('.card-btn')
-    btn.addEventListener('click',()=>{
-       const h1 = document.querySelector('.product-heading')
-       h1.innerText = product.name
+    btn.addEventListener('click', () => {
+        const h1 = document.querySelector('.product-heading')
+        h1.innerText = product.name
     })
 
 
@@ -135,3 +138,70 @@ products.forEach(product => {
 });
 main.appendChild(newSection)
 
+
+// Frequently Asking Question Section
+
+const accordionsObject = [
+    {
+        id: 1,
+        question: "What types of gifts do you offer?",
+        answer: "We offer a wide range of gifts including personalized items, gourmet gift baskets, flowers, and unique handmade crafts.",
+        icon: '<i class="fas fa-angle-down"></i>'
+    },
+    {
+        id: 2,
+        question: "Can I customize a gift?",
+        answer: "Yes, many of our items can be customized to add a personal touch. Look for the 'Customize' option on the product page.",
+        icon: '<i class="fas fa-angle-down"></i>'
+    },
+
+    {
+        id: 3,
+        question: "What payment methods do you accept?",
+        answer: "We accept major credit cards including Visa, MasterCard, American Express, and Discover. We also accept PayPal.",
+        icon: '<i class="fas fa-angle-down"></i>'
+    },
+    {
+        id: 4,
+        question: "Can I return or exchange a gift?",
+        answer: "Yes, we have a 30-day return policy. Please visit our 'Returns & Exchanges' page for more information.",
+        icon: '<i class="fas fa-angle-down"></i>'
+    },
+
+];
+const fqaSection = document.createElement('section')
+fqaSection.classList.add('FQA-container')
+const heading = document.createElement('h1')
+heading.classList.add('heading')
+heading.innerText = 'Frequently Asking Question'
+fqaSection.appendChild(heading)
+const hr2 = document.createElement('hr')
+hr2.classList.add('horizontal-line')
+fqaSection.appendChild(hr2)
+const accordionContainer = document.createElement('div')
+accordionContainer.classList.add('accordion-container')
+fqaSection.appendChild(accordionContainer)
+
+accordionsObject.forEach(accordion => {
+    const accordions = document.createElement('div')
+    accordions.classList.add('accordion')
+    accordions.innerHTML += `
+    <div class="accordion-heading">
+    <h3>${accordion.question}</h3>
+    <p>${accordion.icon} </p>
+   </div>
+   <p class="answer">${accordion.answer}</p>
+    `
+    fqaSection.appendChild(accordions)
+
+    accordions.addEventListener('click', () => {
+        const allAccordions = document.querySelectorAll('.accordion');
+        allAccordions.forEach(acco => {
+            acco.classList.remove('active');
+        });
+        accordions.classList.toggle('active')
+    })
+
+});
+
+main.appendChild(fqaSection)

@@ -1,11 +1,14 @@
+
 body {
 
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
+    /* background-color: #ddd; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+
+
 }
 
 .header {
@@ -107,8 +110,9 @@ body {
     margin-top: 10%;
     text-align: center;
     background-color: rgb(242, 207, 213);
-    border-radius: 22% 0px 22% 0px;
-    /* border-radius: 10px; */
+    /* background-color: white; */
+    /* border-radius: 22% 0px 22% 0px; */
+    border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 
 }
@@ -209,34 +213,41 @@ body {
     text-transform: uppercase;
     font-size: 30px;
     color: palevioletred;
+    /* text-shadow: 2px 2px palevioletred; */
+    color: palevioletred;
+    
     text-shadow: 2px 2px black;
- 
-    /* font-family: 'Times New Roman', Times, serif */
-    /* text-decoration: 2px rgb(208, 87, 127) underline; */
 
+}
+
+.horizontalLine{
+    width: 150px;
+    height: 3px;
+    background-color:palevioletred;
 }
 
 
 .cardWrap {
+    margin-top: 5%;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  
     gap: 5%;
     align-items: center;
-    
+    max-width: 1100px;
+    margin: 5% auto;
+
 }
 
 .card {
     width: 300px;
     height: 320px;
     display: grid;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-
     position: relative;
-    background-color: #ffffff6c;
+    background-color: #ffff;
     padding: 20px 20px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease-in-out;
@@ -288,7 +299,7 @@ body {
     transition: 0.5s all;
     text-align: center;
 
-   
+
 }
 
 .card:hover .card-content {
@@ -296,15 +307,16 @@ body {
     transform: translateY(0);
 }
 
-.card-content h3{
+.card-content h3 {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
-   margin-bottom: -20px;
-   text-shadow: 2px 2px palevioletred;
-  
+    margin-bottom: -20px;
+    text-shadow: 2px 2px palevioletred;
+
 }
-.card-content p{
+
+.card-content p {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -312,13 +324,15 @@ body {
     color: rgb(202, 37, 92);
     text-shadow: 2px 2px white;
 }
-.card-content h5{
+
+.card-content h5 {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 2px 2px whitesmoke;
     /* margin-bottom: 30px; */
 }
+
 .card-btn {
     padding: 12px 20px;
     border-radius: 5px;
@@ -332,8 +346,113 @@ body {
     text-shadow: 2px 2px black;
 }
 
-.card-btn:hover{
+.card-btn:hover {
     background-color: transparent;
     border: 2px solid white;
     color: white;
+}
+
+
+/* FQA-Section */
+.FQA-container {
+
+    max-width: 700px;
+    margin: 15% auto;
+
+}
+
+.FQA-container .heading {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    color: palevioletred;
+    
+    text-shadow: 2px 2px black;
+
+}
+.FQA-container .horizontal-line{
+    width: 300px;
+    height: 3px;
+    background-color:palevioletred;
+}
+
+
+.FQA-container .accordion-container {
+    margin-bottom: 8%;
+    padding: 0 20px;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+.FQA-container .accordion-container .accordion {
+    margin-bottom: -20px;
+    cursor: pointer;
+    /* margin-top: 30px; */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+
+}
+
+.FQA-container .accordion .accordion-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border: 1px solid palevioletred;
+    border-radius: 7px;
+    /* font-size: 16px; */
+    color: palevioletred;
+    text-transform: uppercase;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.FQA-container .accordion.active .accordion-heading {
+    background-color: palevioletred;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.FQA-container .accordion.active .accordion-heading h3 {
+    color: white;
+}
+
+.FQA-container .accordion .accordion-heading i {
+    font-size: 25px;
+}
+
+.FQA-container .accordion.active .accordion-heading i {
+    transform: rotate(180deg);
+    transition: transform .2s .1s;
+    color: #fff;
+}
+
+.FQA-container .accordion .answer {
+    padding: 15px 20px;
+    /* border:1px solid black; */
+    border-radius: 7px;
+    background-color: white;
+    display: none;
+    animation: animate .2s linear backwards;
+    line-height: 2;
+    transform-origin: top;
+    margin-top: -8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.FQA-container .accordion.active .answer {
+    display: block;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: scaleY(0);
+    }
 }
