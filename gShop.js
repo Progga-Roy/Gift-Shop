@@ -50,71 +50,87 @@ main.appendChild(section)
 
 const products = [
     {
-      id:1,
-      img:'/Images/teddy.jpg',
-      name: 'Teddy Bear',
-      price:'700 tk',
-      rating: 3
+        id: 1,
+        img: '/Images/teddy2.png',
+        name: 'Teddy Bear',
+        price: '700 tk',
+        rating: 3
     },
     {
-      id:2,
-      img:'/Images/bird.jpg',
-      name: 'Flower Bouquet',
-      price:'500 tk',
-      rating: 4
+        id: 2,
+        img: '/Images/bird.png',
+        name: 'Show Pice',
+        price: '500 tk',
+        rating: 4
     },
     {
-      id:3,
-      img:'/Images/cho.jpg',
-      name: 'Chocolate Box',
-      price:'350 tk',
-      rating: 3
+        id: 3,
+        img: '/Images/cbox_-removebg-preview.png',
+        name: 'Chocolate Box',
+        price: '350 tk',
+        rating: 3
     },
     {
-      id:4,
-      img:'/Images/mother.jpg',
-      name: 'Show Pice',
-      price:'400 tk',
-      rating: 4
+        id: 4,
+        img: '/Images/mother-removebg-preview.png',
+        name: 'Flower Bouquet',
+        price: '400 tk',
+        rating: 4
     },
     {
-      id:1,
-      img:'/Images/lamp.jpg',
-      name: 'Lamp',
-      price:'450 tk',
-      rating: 2
+        id: 5,
+        img: '/Images/ll_-removebg-preview.png',
+        name: 'Lamp',
+        price: '450 tk',
+        rating: 2
     },
     {
-      id:1,
-      img:'/Images/photof.jpg',
-      name: 'Photo Frame',
-      price:'800 tk',
-      rating: 5
+        id: 6,
+        img: '/Images/photof-removebg-preview.png',
+        name: 'Photo Frame',
+        price: '800 tk',
+        rating: 5
     },
 ]
 
+   let  starIcon = '<i class="fa-solid fa-star"></i>';
+   let getRating =(rating)=>{
+    let icon ='';
+    for(let i=0;i<rating; i++){
+      icon = icon+starIcon
+    }
+    return icon;
+   }
+
 // Create a card section
-const  newSection = document.createElement('section')
-// newSection.classList.add('section-container')
+const newSection = document.createElement('section')
 const h1 = document.createElement('h1')
-h1.innerText =`Latest Product`
+h1.innerText = `Latest Product`
 h1.classList.add('product-heading')
 newSection.appendChild(h1)
 const div = document.createElement('div')
 div.classList.add('cardWrap')
 newSection.appendChild(div)
 products.forEach(product => {
-     const card = document.createElement('div')
-     card.classList.add('card')
-     card.innerHTML += `
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML += `
             <img src="${product.img}" alt="image">
         <div class="card-content">
             <h3 class="card-title">${product.name}</h3>
-            <p class="rating">rating</p>
+            <p class="rating">${getRating(product?.rating)}</p>
             <h5 class="price">${product.price}</h5>
-            <button>Buy Now</button>
+            <button class="card-btn">Buy Now</button>
         </div>
+        
        `
+    const btn = card.querySelector('.card-btn')
+    btn.addEventListener('click',()=>{
+       const h1 = document.querySelector('.product-heading')
+       h1.innerText = product.name
+    })
+
+
     div.appendChild(card)
 });
 main.appendChild(newSection)

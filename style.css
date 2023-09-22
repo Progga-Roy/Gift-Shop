@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 
 .header {
@@ -12,7 +13,8 @@ body {
 
     max-width: 100%;
     margin: 0 auto;
-    position: sticky;
+    position: static;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); */
 
 }
 
@@ -53,20 +55,20 @@ body {
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Dancing Script', cursive; */
     font-family: 'Italianno', cursive;
-  
+
 }
 
 .icons i {
     color: palevioletred;
-   font-weight: bold;
+    font-weight: bold;
 }
 
 .logo1 {
     text-transform: lowercase;
     text-shadow: 2px 2px rgb(187, 78, 115);
     /* text-shadow: 1px 1px brown; */
-    color: rgba(0, 0, 0, 0.847); 
-     font-weight: bolder;
+    color: rgba(0, 0, 0, 0.847);
+    font-weight: bolder;
 }
 
 .logo2 {
@@ -85,10 +87,11 @@ body {
     text-transform: uppercase;
     font-weight: bold;
 }
-.home:hover{
+
+.home:hover {
     background-color: rgb(226, 190, 202);
     color: black;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 /* banner */
@@ -106,7 +109,7 @@ body {
     background-color: rgb(242, 207, 213);
     border-radius: 22% 0px 22% 0px;
     /* border-radius: 10px; */
-
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -120,10 +123,11 @@ body {
 .banner-name {
     font-size: 35px;
     /* color: rgb(189, 51, 120); */
-    color: white;
+    color: palevioletred;
+    text-shadow: 2px 2px black;
     padding: 10px;
     margin: 0;
-    text-shadow: 2px 2px gray;
+    /* text-shadow: 2px 2px gray; */
     /* border-bottom: 2px solid palevioletred; */
 
 }
@@ -199,19 +203,137 @@ body {
 
 /* cards */
 
-.product-heading{
-    margin-top: 5%;
+.product-heading {
+    margin-top: 10%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 30px;
+    color: palevioletred;
+    text-shadow: 2px 2px black;
+ 
     /* font-family: 'Times New Roman', Times, serif */
-    text-decoration: 2px rgb(208, 87, 127) underline;
-      
+    /* text-decoration: 2px rgb(208, 87, 127) underline; */
+
 }
 
 
-.cardWrap{
- 
-    display:  grid;
-    grid-template-columns: repeat(3,1fr);
+.cardWrap {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    gap: 5%;
+    align-items: center;
+    
+}
+
+.card {
+    width: 300px;
+    height: 320px;
+    display: grid;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+
+    position: relative;
+    background-color: #ffffff6c;
+    padding: 20px 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    border-radius: 8px;
+    border: 3px solid rgb(209, 148, 168);
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(to bottom, #9995951e, #F5C0CB);
+    background: linear-gradient(to bottom, #9995951e, #e8a1af);
+    background: linear-gradient(to bottom, #9995954e, #e8a1af);
+    /* background: linear-gradient(to bottom, #548aa1b3, #e8a1af); */
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.card .card-content {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+    text-align: center;
+
+   
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-content h3{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+   margin-bottom: -20px;
+   text-shadow: 2px 2px palevioletred;
+  
+}
+.card-content p{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: -20px;
+    color: rgb(202, 37, 92);
+    text-shadow: 2px 2px white;
+}
+.card-content h5{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px whitesmoke;
+    /* margin-bottom: 30px; */
+}
+.card-btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(208, 87, 127);
+    font-size: 18px;
+    color: white;
+    box-shadow: 0px 5px 5px gray;
+    /* margin-top: -20px; */
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+.card-btn:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
 }
