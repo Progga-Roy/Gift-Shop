@@ -7,20 +7,16 @@ body {
     padding: 0;
     box-sizing: border-box;
     /* overflow-x: hidden;
-    
-overflow-y: hidden; */
+     overflow-y: hidden; */
     /* overflow: hidden; */
-
 }
 
 .header {
     background-color: white;
-
     max-width: 100%;
     margin: 0 auto;
     position: static;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); */
-
 }
 
 .header-div {
@@ -44,23 +40,13 @@ overflow-y: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
 }
 
 .header ul li:hover {
     text-decoration: 2px palevioletred underline;
-
-
 }
-
-
 .header h1 {
-    /* font-family: 'Pacifico', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
     font-family: 'Italianno', cursive;
-
 }
 
 .icons i {
@@ -94,14 +80,17 @@ overflow-y: hidden; */
 }
 
 .home:hover {
-    background-color: rgb(226, 190, 202);
+    background-color: pink;
     color: black;
     text-decoration: none !important;
 }
 
-/* banner */
+
+
+
+/* banner section */
 .main-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -113,8 +102,8 @@ overflow-y: hidden; */
     text-align: center;
     background-color: rgb(242, 207, 213);
     /* background-color: white; */
-    /* border-radius: 22% 0px 22% 0px; */
-    border-radius: 10px;
+    border-radius: 22% 0px 22% 0px;
+    /* border-radius: 10px; */
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     /* overflow: hidden; */
 
@@ -168,8 +157,6 @@ overflow-y: hidden; */
     color: brown;
     /* margin: 0; */
     padding: 0;
-
-
 }
 
 .shop-btn,
@@ -191,9 +178,6 @@ overflow-y: hidden; */
     /* outline: auto; */
     border: 2px solid white;
     color: palevioletred;
-
-
-
 }
 
 .read-btn {
@@ -235,7 +219,6 @@ overflow-y: hidden; */
 
 .cardWrap {
     margin-top: 5%;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
@@ -273,8 +256,8 @@ overflow-y: hidden; */
     top: 0;
     left: 0;
     display: block;
-    background: linear-gradient(to bottom, #9995951e, #F5C0CB);
-    background: linear-gradient(to bottom, #9995951e, #e8a1af);
+    /* background: linear-gradient(to bottom, #9995951e, #F5C0CB); */
+    /* background: linear-gradient(to bottom, #9995951e, #e8a1af); */
     background: linear-gradient(to bottom, #9995954e, #e8a1af);
     /* background: linear-gradient(to bottom, #548aa1b3, #e8a1af); */
     z-index: 2;
@@ -362,7 +345,6 @@ overflow-y: hidden; */
 
 /* FQA-Section */
 .FQA-container {
-
     max-width: 700px;
     margin: 15% auto;
 
@@ -422,8 +404,6 @@ overflow-y: hidden; */
     background-color: palevioletred;
     margin-top: 20px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-
-
 }
 
 .FQA-container .accordion.active .accordion-heading h3 {
@@ -491,17 +471,17 @@ overflow-y: hidden; */
 .footer-links .links {
     list-style: none;
     text-align: center;
-    color: #e4e2e2;
+    /* color: #e4e2e2; */
     text-decoration: none;
     /* color: palevioletred; */
-    font-size: 18px;
+    font-size: 17px;
 
 }
 
 .footer-links .links i {
     text-decoration: none;
-    color:palevioletred;
-    
+    color: palevioletred;
+
 }
 
 .footer-address h3 {
@@ -541,13 +521,17 @@ overflow-y: hidden; */
     border-radius: 5px;
     font-size: 17px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
 
 }
+
 .footer-address .input .send:hover {
-    
+
     background-color: pink;
-    color:black;
-    
+    color: black;
+
 
 }
 
@@ -569,9 +553,10 @@ overflow-y: hidden; */
     border-radius: 20px;
 
 }
+
 .footer-address .subscribe-btn:hover {
-   background-color: palevioletred;
-color: black;
+    background-color: palevioletred;
+    color: black;
 
 }
 
@@ -601,11 +586,224 @@ color: black;
 
     font-size: 20px;
     color: palevioletred;
-  
+
     cursor: pointer;
 }
-.footer-social-link .social-links i:hover{
+
+.footer-social-link .social-links i:hover {
 
     /* border-bottom: 2px solid pink; */
-    color:pink;
+    color: pink;
+}
+
+
+/* responsive for mobile */
+
+@media screen and (max-width:521px) {
+    .header {
+        /* max-width: 100%;
+        margin: 0 auto; */
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .header-div {
+        display: flex;
+        flex-direction: column;
+        /* margin:0; */
+
+    }
+
+
+    .header ul {
+        display: flex;
+        flex-direction: column;
+        /* display: none; */
+    }
+
+    .header ul li {
+
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .icons i {
+        display: none;
+    }
+
+    .banner {
+
+        display: flex;
+        flex-direction: column;
+        /* border-radius: 10px; */
+        width: 95%;
+        margin: 5% auto;
+
+
+
+    }
+
+    .first-banner-des {
+        width: 100%;
+
+
+    }
+
+    .banner-name {
+        font-size: 26px;
+
+
+    }
+
+    .banner-img {
+        width: 100%;
+    }
+
+    .banner-img img {
+        width: 100%;
+
+    }
+
+    .shop-btn,
+    .read-btn {
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+
+    .banner-des {
+        text-align: center;
+        padding: 10px;
+        margin-top: -10px;
+        font-size: 15px;
+
+    }
+
+    .offer {
+        font-size: 16px;
+    }
+
+    .sale {
+        text-transform: uppercase;
+        font-size: 35px;
+        font-family: 'Skranji', cursive;
+        color: brown;
+        /* margin: 0; */
+        padding: 0;
+
+    }
+
+    .product-heading {
+
+        font-size: 22px;
+
+    }
+
+    .cardWrap {
+
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .card {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-content h3 {
+        font-size: 22px;
+    }
+
+    .card-content p {
+        font-size: 18px;
+
+    }
+
+    .card-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+
+    }
+
+    .FQA-container {
+
+        max-width: 700px;
+        margin: 50% auto;
+        padding: 2%;
+
+    }
+
+    .FQA-container .heading {
+        font-size: 22px;
+    }
+
+    .FQA-container .accordion .accordion-heading,
+    .FQA-container .accordion .answer {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        max-width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin-top: -10%;
+
+    }
+
+    .footer-address .input {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .footer-address .input .input-field {
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+    .footer-address .input .send {
+        width: 40%;
+        height: 100%;
+        padding: 8px 10px;
+    }
+
+    .footer-address .subscribe-btn {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .footer-links h3,
+    .footer-address h3,
+    .footer-social-link h3 {
+        font-size: 18px;
+    }
+
+    .footer-links .links,
+    .footer-social-link .address {
+        font-size: 16px;
+
+
+    }
 }

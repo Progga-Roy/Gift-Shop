@@ -4,7 +4,7 @@ const header = document.createElement('header')
 header.classList.add('header')
 header.innerHTML = `<div class="header-div">
 <div>
-    <h1><i class="fa-solid fa-gift" style="color: #e06ca4;"></i><span class="logo1">Gifting</span><span class="logo2">Gallery</span></h1>
+    <h1><i class="fa-solid fa-gift" style="color: #db7093;"></i><span class="logo1">Gifting</span><span class="logo2">Gallery</span></h1>
 </div>
 <div>
     <ul>
@@ -23,6 +23,8 @@ header.innerHTML = `<div class="header-div">
 </div>
 `
 body.appendChild(header)
+
+
 
 // create main container then append in body after that create banner section and append in main container
 
@@ -143,6 +145,9 @@ products.forEach(product => {
 main.appendChild(newSection)
 
 
+
+
+
 // Frequently Asking Question Section
 
 const accordionsObject = [
@@ -184,13 +189,15 @@ hr2.classList.add('horizontal-line')
 fqaSection.appendChild(hr2)
 const accordionContainer = document.createElement('div')
 accordionContainer.classList.add('accordion-container')
+
 fqaSection.appendChild(accordionContainer)
 
 accordionsObject.forEach(accordion => {
     const accordions = document.createElement('div')
     accordions.classList.add('accordion')
+  
     accordions.innerHTML += `
-    <div class="accordion-heading">
+    <div class="accordion-heading ">
     <h3>${accordion.question}</h3>
     <p>${accordion.icon} </p>
    </div>
@@ -209,6 +216,8 @@ accordionsObject.forEach(accordion => {
 });
 
 main.appendChild(fqaSection)
+
+
 
 
 // footer 
