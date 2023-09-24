@@ -50,6 +50,98 @@ main.appendChild(section)
 
 
 
+// const products = [
+//     {
+//         id: 1,
+//         img: '/Images/teddy2.png',
+//         name: 'Teddy Bear',
+//         price: '700 tk',
+//         rating: 3
+//     },
+//     {
+//         id: 2,
+//         img: '/Images/bird.png',
+//         name: 'Show Pice',
+//         price: '500 tk',
+//         rating: 4
+//     },
+//     {
+//         id: 3,
+//         img: '/Images/cbox_-removebg-preview.png',
+//         name: 'Chocolate Box',
+//         price: '350 tk',
+//         rating: 3
+//     },
+//     {
+//         id: 4,
+//         img: '/Images/mother-removebg-preview.png',
+//         name: 'Flower Bouquet',
+//         price: '400 tk',
+//         rating: 4
+//     },
+//     {
+//         id: 5,
+//         img: '/Images/ll_-removebg-preview.png',
+//         name: 'Lamp',
+//         price: '450 tk',
+//         rating: 2
+//     },
+//     {
+//         id: 6,
+//         img: '/Images/photof-removebg-preview.png',
+//         name: 'Photo Frame',
+//         price: '800 tk',
+//         rating: 5
+//     },
+// ]
+
+// let starIcon = '<i class="fa-solid fa-star"></i>';
+// let getRating = (rating) => {
+//     let icon = '';
+//     for (let i = 0; i < rating; i++) {
+//         icon = icon + starIcon
+//     }
+//     return icon;
+// }
+
+// // Create a card section
+// const newSection = document.createElement('section')
+// const h1 = document.createElement('h1')
+// h1.innerText = `Latest Product`
+// h1.classList.add('product-heading')
+// newSection.appendChild(h1)
+// const hr = document.createElement('hr')
+// hr.classList.add('horizontalLine')
+// newSection.appendChild(hr)
+// const div = document.createElement('div')
+// div.classList.add('cardWrap')
+// newSection.appendChild(div)
+// products.forEach(product => {
+//     const card = document.createElement('div')
+//     card.classList.add('card')
+//     card.innerHTML += `
+//             <img src="${product.img}" alt="image">
+//         <div class="card-content">
+//             <h3 class="card-title">${product.name}</h3>
+//             <p class="rating">${getRating(product?.rating)}</p>
+//             <h5 class="price">${product.price}</h5>
+//             <button class="card-btn">Buy Now</button>
+//         </div>
+        
+//        `
+
+//     const btn = card.querySelector('.card-btn')
+//     btn.addEventListener('click', () => {
+//         const h1 = document.querySelector('.product-heading')
+//         h1.innerText = product.name
+//     })
+
+
+//     div.appendChild(card)
+// });
+// main.appendChild(newSection)
+
+
 const products = [
     {
         id: 1,
@@ -129,21 +221,55 @@ products.forEach(product => {
         </div>
         
        `
-    const btn = card.querySelector('.card-btn')
-    btn.addEventListener('click', () => {
-        const h1 = document.querySelector('.product-heading')
-        h1.innerText = product.name
-    })
-
-
-    div.appendChild(card)
+       div.appendChild(card)
 });
-// const seeMoreBtn = document.createElement('button')
-// seeMoreBtn.innerHTML =`<button>See More </button>`
-// seeMoreBtn.classList.add('seeMore')
-// main.appendChild(seeMoreBtn)
 main.appendChild(newSection)
 
+
+// Create a Bootstrap-style modal
+const modal = document.createElement('div');
+modal.classList.add('modal-container');
+modal.innerHTML = `
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h3>Product Details</h3>
+            </div>
+            <div class="modal-body">
+               
+            </div>
+        </div>
+    </div>
+`;
+document.body.appendChild(modal);
+
+
+const buyButtons = document.querySelectorAll('.card-btn');
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productName = button.parentElement.querySelector('.card-title').innerText;
+        const modalBody = document.querySelector('.modal-body');
+        modalBody.innerHTML = `
+            <h3>${productName}</h3>
+           
+        `;
+        modal.style.display = 'block';
+    });
+});
+
+
+const closeModal = document.querySelector('.modal .close');
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+
+window.addEventListener('click', event => {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
 
 
 
