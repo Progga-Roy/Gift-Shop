@@ -242,8 +242,9 @@ modal.innerHTML = `
         </div>
     </div>
 `;
-document.body.appendChild(modal);
+body.appendChild(modal);
 
+  // Add event listener to "Buy Now" buttons
 
 const buyButtons = document.querySelectorAll('.card-btn');
 buyButtons.forEach(button => {
@@ -251,20 +252,21 @@ buyButtons.forEach(button => {
         const productName = button.parentElement.querySelector('.card-title').innerText;
         const modalBody = document.querySelector('.modal-body');
         modalBody.innerHTML = `
-            <h3>${productName}</h3>
+            <h2>${productName}</h2>
            
         `;
         modal.style.display = 'block';
     });
 });
 
+// Close the modal when clicking the close button
 
 const closeModal = document.querySelector('.modal .close');
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-
+// Close the modal when clicking outside the modal content
 window.addEventListener('click', event => {
     if (event.target == modal) {
         modal.style.display = 'none';
@@ -315,9 +317,7 @@ hr2.classList.add('horizontal-line')
 fqaSection.appendChild(hr2)
 const accordionContainer = document.createElement('div')
 accordionContainer.classList.add('accordion-container')
-
 fqaSection.appendChild(accordionContainer)
-
 accordionsObject.forEach(accordion => {
     const accordions = document.createElement('div')
     accordions.classList.add('accordion')
