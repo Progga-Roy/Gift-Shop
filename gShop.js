@@ -16,8 +16,8 @@ header.innerHTML = `<div class="header-div">
 </div>
 <div>
     <ul class="icons">
-      <li><i class="fa-solid fa-user" style="color: #e06ca4;"></i></li>
-      <li> <i class="fas fa-search" style="color: #e06ca4;"></i> </li>
+      <li><i class="fa-solid fa-user" ></i></li>
+      <li> <i class="fas fa-search"></i> </li>
     </ul>
 </div>
 </div>
@@ -355,9 +355,9 @@ footerContainer.innerHTML = `
          <h3>Useful Links</h3>
          <div class="links">
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> About</li>
-            <li><a href="#"><i class="fa-solid fa-address-book"></i> </a>Contact</li>
-            <li><a href="#"><i class="fa-brands fa-product-hunt"></i> </a>Product</li>
-            <li><a href="#"><i class="fa-brands fa-shopify"></i> </a>Shop</li>
+            <li><a href="#"><i class="fa-solid fa-address-book"></i></a> Contact</li>
+            <li><a href="#"><i class="fa-brands fa-product-hunt"></i></a> Product</li>
+            <li><a href="#"><i class="fa-brands fa-shopify"></i></a> Shop</li>
          </div>
      </div>
 
