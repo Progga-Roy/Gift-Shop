@@ -219,7 +219,7 @@ products.forEach(product => {
             <h5 class="price">${product.price}</h5>
             <button class="card-btn">Buy Now</button>
         </div>
-        
+          
        `
        div.appendChild(card)
 });
@@ -251,7 +251,7 @@ buyButtons.forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.parentElement.querySelector('.card-title').innerText;
         const modalBody = document.querySelector('.modal-body');
-        modalBody.innerHTML = `
+        modalBody.innerHTML= `
             <h2>${productName}</h2>
            
         `;
